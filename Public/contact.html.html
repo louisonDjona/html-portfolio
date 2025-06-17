@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact page</title>
+    <style>
+        *{
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+           font-family: Arial, sans-serif;
+        } 
+        body{
+           background-color: #527181;
+           padding: 40px;
+        }
+        .contact-container{
+            display: flex;
+            max-width: 1000px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            flex-wrap: wrap;
+        }
+        .contatc-info, .contact-form{
+           flex: 1;
+           padding: 30px;
+        }
+        .contatc-info{
+            background: #222;
+            color: white;
+        }
+        .contact-info h2{
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .contact-info p{
+            margin: 10px 0;
+        }
+        .contact-form h2{
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .contact-form form{
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea{
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+        .contact-form button{
+            background: #007BFF;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: backgroung 0.3s;
+        }
+        .contact-form button:hover{
+            background: #0056b3;
+        }
+        @media(max-width: 768px){
+            .contact-container{
+                flex-direction: column;
+            }
+            .contact-info{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Contact-container">
+        <div class="contact-info">
+            <h2>Contact-info</h2>
+            <p><strong>Email:djonalouison@gmail.com</strong></p>
+            <p><strong>Phone:+243 816018216</strong></p>
+            <p><strong>Location:Kampala(Uganda)</strong></p>
+        </div>
+        <div class="contact-form">
+            <h2>Send Me a Message</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required>
+                </textarea>
+                <button type="submit">Send Message</button>    
+            </form>
+        </div>
+    </div>
+</body>
+</html>

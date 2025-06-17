@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFRILABS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background-color: gray;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        .content{
+            padding: 200px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .main-box{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .left-side, .right-side{
+            flex: 1 1 300px;
+        }
+        .left-side img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        .right-side{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        .right-side p{
+            background-color: gray;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 2.0rem;
+            text-align: center;
+        }
+        .right-side img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        @media(max-width: 768px){
+            .right-side p{
+                text-align: center;
+                font-size: 0.95rem;
+            }
+        }
+        @media(max-width: 500px){
+            .main-box{
+                flex-direction: column;
+            }
+        }
+        .full-width-img{
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .full-width-img img{
+            width: 100%;
+            height: auto;
+            border-radius: 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        .page-footer{
+            width: 100%;
+            background-color: #425E83;
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            font-style: bold;
+            margin-top: 100px;
+        }
+        .footer-text{
+            backdrop-filter: brightness(0.5);
+            padding: 50px;
+        }
+        @media(max-width: 600px){
+            .footer-text{
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fashion show AFRILABS</h1>
+    </header>
+    <div class="content">
+        <div class="main-box">
+            <div class="left-side">
+                <img src="c:\Rch\AGORRA\Home\content\AfrilabsPics\IMG_7019.PNG" alt="pic 1">
+            </div>
+            <div class="right-side">
+                <p>Le 26 juillet 2024, l'agence AGORRA a<br /> 
+                   presente un defile de mode a ma Wallonie<br />
+                   Bruxelles pour la cloture des ateliers regionals<br />
+                   physiques AFRILABS X UKAMILI
+                </p>
+                <img src="c:\Rch\AGORRA\Home\content\AfrilabsPics\IMG_7020.PNG" alt="pic 2">
+            </div>
+        </div>
+        <div class="full-width-img">
+            <img src="c:\Rch\AGORRA\Home\content\AfrilabsPics\IMG_2206.JPG" alt="pic 3">
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="footer-text">
+            <p>Agorra 2025 Tous droits reserves</p>
+        </div>
+    </footer>
+</body>
+</html>

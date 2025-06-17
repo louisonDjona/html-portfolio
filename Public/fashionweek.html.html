@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lubumbashi Fashion Week</title>
+    <style>
+        @media (max-width: 600px){
+            body{
+                background-color: whitesmoke;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 900px){
+            body{
+                background-color: whitesmoke;
+            }
+        }
+        @media (min-width: 901px) and (max-width: 1200px){
+            body{
+                background-color: whitesmoke;
+            }
+        }
+        @media (min-width: 1201px) {
+            body{
+                background-color: white;
+            }
+        }
+        body, html{
+            width: 100%;
+            height: 100%;
+            background-color: #111;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            padding-top: 150px;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: darkred;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 0 20px;
+        }
+        header h1{
+            font-size: 1.8rem;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        @media(max-width: 600px){
+            header h1{
+                font-size: 1.2rem;
+            }
+        }
+        .split-section{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            min-width: 100vh;
+            margin-left: 30px;
+        }
+        .left-image{
+            flex: 1;
+            min-width: 300px;
+            max-width: 50%;
+        }
+        .left-image img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .right-text{
+            flex: 1;
+            max-width: 50%;
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 300px;
+        }
+        .top-text{
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .middle-texts{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            gap: 1rem;
+            margin: 2rme 0;    
+        }
+        .bottom-text{
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .bottom-text li{
+            color: white;
+        }
+        @media(max-width: 768px){
+            .split-setion{
+                flex-direction: column;
+            }
+            .left-image, .right-text{
+                max-width: 100%;
+            }
+        }
+        .second-section{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding-top: 100px;
+            max-width: 100%;
+        }
+        .left-box{
+            color: white;
+            flex: 1;
+            min-width: 250px;
+            margin: 200px;
+        }
+        .left-box h2{
+            margin-bottom: 1rem;
+        }
+        .left-box ul{
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        .right-box{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 100px;
+        }
+        .top-columns{
+            color: white;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .column{
+            flex: 1;
+            min-width: 200px;
+        }
+        .column h3{
+            margin-bottom: 0.5rem;
+        }
+        .column ul{
+            list-style-type: square;
+            padding-left: 1.5rem;
+        }
+        .bottom-right-list h3{
+            margin-bottom: 0.5rem;
+        }
+        .bottom-right-list ul{
+            list-style-type: circle;
+            padding: 1.5rem;
+        }
+        .bottom-box{
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #111;
+            padding: 10px;
+        }
+        .bottom-box img{
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: contain;
+            border-radius: 10px;
+            border-radius: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        @media(max-width: 768px){
+            .second-section{
+                flex-direction: column;
+            }
+            .top-columns{
+                flex-direction: column;
+            }
+            .bottom-box{
+                padding: 5px;
+            }
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .image-container{
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }       
+        .row{
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .top-row img{
+            width: 400px;
+            height: 550px;
+            object-fit: cover;
+            max-width: 100%;
+        }
+        .middle-row img{
+            width: 400px;
+            height: 350px;
+            object-fit: cover;
+            max-width: 100%;
+        }
+        .bottom-row img{
+            width: 800px;
+            height: 450px;
+            object-fit: cover;
+            max-width: 100%;
+        }
+        @media(max-width: 850px){
+            .top-row img, .middle-row img{
+                width: 100%;
+                height: auto;
+            }
+            .bottom-row img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .main-container{
+            margin-top: 20px;
+            height: 1150px;
+            width: 100%;
+            background-image: url(./IMG_0266.JPG);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            gap: 20px;
+        }
+        .first-text, .right-content{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .first-text{
+            justify-content: center;
+        }
+        .first-text h2{
+            font-size: 2.5rem;
+            line-height: 1.5;
+        }
+        .first-text h2 span{
+            display: inline-block;
+            border-bottom: 5px solid white;
+            margin-bottom: 10px;
+        }
+        .right-content{
+            box-sizing: content-box;
+            text-align: center;
+            background-color: white;
+            justify-content: space-between;
+        }
+        .paragraphs p{
+            font-size: 20px;
+            color: black;
+            margin-bottom: 15px;
+            font-size: 20px
+        }
+        .bottom-text{
+            alignment-baseline: end;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        @media(max-width: 768px){
+            .main-container{
+                flex-direction: column;
+                height: auto;
+            }
+            .first-text, .right-content{
+                width: 100%;
+            }
+            .first-text h2{
+                text-align: center;
+                font-size: 2rem;
+            }
+            .right-content{
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>LUBUMBASHI</span>
+            <span>FASHION</span>
+            <span>WEEK</span>
+        </h1>
+    </header>
+    <div class="split-section">
+        <div class="left-image">
+            <img src="c:\Rch\AGORRA\Home\content\Fashionweekpics\IMG_0286.JPG" alt="Fashion image 1">
+        </div>
+        <div class="right-text">
+            <p class="top-text">
+                La Fashi Week de Lubumbashi est un<br />
+                événement de mode majeur visant à<br />
+                célébrer et promouvoir la mode, la culture<br /> 
+                et l'art local organisée tous les ans depuis <br />
+                2022, chaque édition est une plateforme<br />
+                de rencontre pour les acteurs de la mode<br /> 
+                à Lubumbashi.
+            </p>
+            <div class="middle-texts">
+                <h2>OBEJCTIFS</h2>
+                <h2>Objectifs generaux</h2>
+            </div>
+            <ul class="bottom-text">
+                <li>Promouvoir la créativite et l'innovation<br />
+                    dans l'industrie de la mode a Lubumbashi
+                </li>
+                <li>Mettre en lumière les talents locaux</li>
+                <li>Encourager les échanges culturesls et professionels dans le domaine</li>
+            </ul>
+        </div>
+    </div>
+    <div class="second-section">
+        <div class="left-box">
+            <h2>Objectifs spécifiques</h2>
+            <ul>
+                <li>Présenter les collections annuellement pour les<br />
+                    nouvelles saisons
+                </li>
+                <li>Faciliter les opportunités de resautage et de<br /> 
+                    collabortion entre les professionels de la<br />
+                    mode
+                </li>
+                <li>Sensibiliser le public à l'importance de la mode<br /> 
+                    et de la culture dans le dévelopment
+                </li>
+            </ul>
+        </div>
+        <div class="right-box">
+            <div class="top-columns">
+                <div class="column">
+                    <h3>PARTICIPANTS</h3>
+                    <h3>Invités speciaux</h3>
+                    <ul>
+                        <li>Designers locaux et internationaux</li>
+                        <li>Artistes et createurs </li>
+                        <li>professionels de l'industrie de la mode</li>
+                        <li>Représentants des medias</li>
+                        <li>Partenaires et sponsors</li>
+                    </ul>
+                    <h3>public cible</h3>
+                    <ul>
+                        <li>Amateurs de mode</li>
+                        <li>Etudiants en design et mode</li>
+                        <li>professionels du secteur textile</li>
+                        <li>Grand public</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-box">
+            <img src="c:\Rch\AGORRA\Home\content\Fashionweekpics\IMG_1863.JPG" alt="bottom-image">
+        </div>
+    </div>
+    <div class="image-container">
+        <div class="row top-row">
+            <img src="c:\Rch\AGORRA\Home\content\Fashionweekpics\IMG_0277.JPG" alt="top image 1">
+            <img src="c:\Rch\AGORRA\Home\content\Fashionweekpics\IMG_1876.JPG" alt="top image 2">
+        </div>
+        <div class="row middle-row">
+            <img src="c:\Rch\AGORRA\Home\content\Fashionweekpics\IMG_0284.JPG" alt="middle imgae 1">
+            <img src="c:\Rch\AGORRA\Home\content\Fashionweekpics\IMG_0287.JPG" alt="middle image 2">
+        </div>
+        <div class="row bottom-row">
+            <img src="c:\Rch\AGORRA\Home\content\Fashionweekpics\IMG_0270.JPG" alt="bottom-row image">
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="first-text">
+            <h2>
+                <span>LUBUMBASHI</span><br />
+                <span>FASHION</span><br />
+                <span>WEEK</span><br />
+                <span>2024</span>
+            </h2>
+        </div>
+        <div class="right-content">
+            <div class="paragraphs">
+                <p>La 3e édition de la Fashion Week<br /> 
+                  de Lubumbashi s'est tenue les 6 et <br /> 
+                  7 septembre 2024 au Musée <br /> 
+                  National de Lubumbashi, mettant <br /> 
+                  en avant la richesse et l'héritage <br /> 
+                  de la terre congolaise à travers le <br /> 
+                  thème "belle terre". Ce thème <br /> 
+                  visait a célébrer aussi bien les <br /> 
+                  ressources du sous-sol congolais <br /> 
+                  que la diversité culturel du pays<br /> 
+                  avec un dress code en beige<br /> 
+                  symbole de la terre.
+                </p>
+                <p>Le premier jour etait dedié aux<br />  
+                  défilés de mode durant lequel des <br /> 
+                  mannequins ont présenté les <br /> 
+                  créations de créateurs locaux.<br /> 
+                  offrant un panorama unique de la <br /> 
+                  mode congolaise contemporaine
+                </p>
+                <p>Le deuxième jour a permis au<br /> 
+                  public d'acheter les oeuvres <br /> 
+                  dévoilées la veille, tout en <br /> 
+                  favorisant le networking entre <br /> 
+                  designers, acheteurs et<br /> 
+                  passionnés de mode.
+                </p>
+                <p>L'événement a été rendu possible<br /> 
+                  par le biais du soutien de plusieurs <br /> 
+                  parteneurs majeurs : l'institut<br /> 
+                  Francais de Lubumbashi, le <br /> 
+                  Groupe Psaro, la Polyclinique<br /> 
+                  Delta, le magazine Buzz, Dl <br /> 
+                  Multimedia et la brasserie <br /> 
+                  Brasimba.
+                </p>
+                <p>Cette édition a positionné la<br />  
+                  Fashion Week de Lubumbashi <br /> 
+                  comme une plateforme essentielle <br /> 
+                  pour la valorisation de la mode et <br /> 
+                  de la culture locale. 
+                </p>
+            </div>
+            <div class="bottom-text">
+                <h2>
+                    <span>LE FESTIVAL DE</span><br />
+                    <span>MODE DE LA VILLE</span><br />
+                    <span>DE LUBUMBASHI</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

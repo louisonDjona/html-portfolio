@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #316B77;
+        }
+        header{
+            background-color: darkred;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
+            font-size: 10px;
+        }
+        .content{
+            padding-top: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 1.2rem;
+            object-fit: contain;
+        }
+        .content p{
+            flex: 1 1 45%;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        @media(max-width: 768px){
+            .content p{
+                flex: 1 1 100%;
+            }
+        }
+        .team-title{
+            padding: 80px;
+            background-color: #316B77;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .model{
+            max-width: 1000px;
+            width: 100%;
+            padding-top: 30px;
+            padding: 80;
+            margin-left: 50px;
+            text-align: center;
+        }
+        .team-title h2{
+            font-size: 2.5rem;
+            color: white;
+        }
+        .agorra-title{
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .image-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .image-grid img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .list-container{
+            width: 95%;
+            max-width: 1200px;
+            background: #ddd;
+            position: 20px;
+            margin-left: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1)
+        }
+        .horizontal-list{
+            display: flex;
+            justify-content: space-between;
+            overflow-x: auto;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        .horizontal-list li{
+            min-width: 100px;
+            flex: 1 0 auto;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            background: #ddd;
+            margin: 5px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+        .horizontal-list::-webkit-scrollbar{
+            height: 8px;
+        }
+        .horizontal-list::-webkit-scrollbar-thumb{
+            background: #999;
+            border-radius: 4px;
+        }
+        .horizontal-list::-webkit-scrollbar-track{
+            background: #eee;
+        }
+        @media screen and (max-width: 700px) {
+            .horizontal-list li{
+                flex: 1 1 calc(100% / 3);
+            }
+        }
+        @media screen and (max-width: 400px){
+            .horizontal-list li{
+                flex: 1 1 calc(100% / 2);
+            }
+        }
+        h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        @media(max-width: 450px){
+            .image-grid{
+                grid-template-columns: 1fr;
+            }
+        }
+        @media(max-width: 600px){
+            .image-grid{
+                grid-template-columns: 1fr;
+            }
+        }
+        .page-footer{
+            width: 100%;
+            background-image: url(./IMG_0844.JPG);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            font-style: bold;
+        }
+        .footer-text{
+            backdrop-filter: brightness(0.5);
+        }
+        @media(max-width: 600px){
+            .footer-text{
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>QUI SOMMES-NOUS?</h1>
+    </header>
+    <div class="content">
+        <p>AGORRA est une industrie culturelle et créative qui 
+           oeuvre à promouvoir la mode congolaie à travers
+           ses événéments et la commercialisation des 
+           services de ses mannequins. En activité
+           janvier 2022, l'agence a orgnisé trois éditions de 
+           fashion Week dans la ville de Lubumbashi dont la 
+           derniere en septembre 2024 en partenariat avec 
+           l'institut Francais de Lubumbashi et une 
+           participation remarquée a la 7ème biennale de
+           Lubumbashi au defilé de mode du village 
+           Makwacha en octobre 2022.    
+        </p>
+        <p>Notre objectif est de recruter et former des
+           personnes ayant des ambitions de carrière 
+           professionnelle dans le domaine de la mode 
+           dont tous les acteurs de la mode entre autre 
+           stylistes, mannequins, maquilleurs, coiffeurs,
+           accessoristes, photograpes et les medias 
+           dans la valorisation de l'industrie de la mode 
+           en RDC;
+           Nous avons collaboré avec multiples artistes 
+           musiciens du pays et différentes entreprises
+           de la place.
+        </p>
+    </div>
+    <div class="team-title">
+        <h2>Team Mannequins</h2>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Rose Kadinga\IMG_0970.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Rose Kadinga\IMG_1231.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Rose Kadinga\IMG_0938.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Rose Kadinga\IMG_0940.PNG" alt="pic 4">
+            </div>
+            <h3>Rose KADINGA</h3>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list1"></ul>
+                <ul class="horizontal-list" id="list2"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Junior Doki\IMG_0986.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Junior Doki\IMG_0991.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Junior Doki\IMG_0985.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Junior Doki\IMG_0992.PNG" alt="pic 4">
+            </div>
+            <h3>JUNIOR DOKI</h3>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list3"></ul>
+                <ul class="horizontal-list" id="list4"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Migrael Luatianakio\IMG_1157.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Migrael Luatianakio\IMG_1150.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Migrael Luatianakio\IMG_1156.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Migrael Luatianakio\IMG_6973.JPG" alt="pic 4">
+            </div>
+            <h3>MIGRAEL LUATIANAKIO</h3>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list5"></ul>
+                <ul class="horizontal-list" id="list6"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Bless Kongolo\IMG_0981.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Bless Kongolo\IMG_0980.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Bless Kongolo\IMG_0979.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Bless Kongolo\IMG_0975.PNG" alt="pic 4">
+            </div>
+            <h3>BLESS KONGOLO</h3>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list7"></ul>
+                <ul class="horizontal-list" id="list8"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Sandy Meyers\IMG_1139.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Sandy Meyers\IMG_1141.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Sandy Meyers\IMG_1140.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Sandy Meyers\IMG_1199.PNG" alt="pic 4">
+            </div>
+            <h3>SANDY MEYERS</h3>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list9"></ul>
+                <ul class="horizontal-list" id="list10"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Paul Mputu\IMG_1215.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Paul Mputu\IMG_0984.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Paul Mputu\IMG_1212.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Paul Mputu\IMG_1215.PNG" alt="pic 4">
+            </div>
+            <h3>PAUL MPUNTU</h3>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list11"></ul>
+                <ul class="horizontal-list" id="list12"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Dan Piema\IMG_1208.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Dan Piema\IMG_1207.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Dan Piema\IMG_1204.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Dan Piema\IMG_0954.PNG" alt="pic 4">
+            </div>
+            <h3>DAN PIEMA</h3></footer>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list13"></ul>
+                <ul class="horizontal-list" id="list14"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Abiagael Chiam\IMG_1164.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Abiagael Chiam\IMG_1163.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Abiagael Chiam\IMG_1162.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Abiagael Chiam\IMG_1165.PNG" alt="pic 4">
+            </div>
+            <h3>ABIGAEL CHIAM</h3>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list15"></ul>
+                <ul class="horizontal-list" id="list16"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Tyty Francine\IMG_0930.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Tyty Francine\IMG_1147.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Tyty Francine\IMG_1151.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Tyty Francine\IMG_0926.PNG" alt="pic 4">
+            </div>
+            <h3>TYTY FANCINE</h3>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list17"></ul>
+                <ul class="horizontal-list" id="list18"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Victor Lukusa\IMG_0978.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Victor Lukusa\IMG_0977.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Victor Lukusa\IMG_0976.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Victor Lukusa\IMG_1222.PNG" alt="pic 4">
+            </div>
+            <h3>VICTOR LUKUSA</h3>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list19"></ul>
+                <ul class="horizontal-list" id="list20"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Christian Salomon KAPAKO\IMG_0990.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Christian Salomon KAPAKO\IMG_0987.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Christian Salomon KAPAKO\IMG_0988.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Christian Salomon KAPAKO\IMG_0989.PNG" alt="pic 4">
+            </div>
+            <h3>CHRISTIAN SALOMON KAPAKO</h3></footer>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list21"></ul>
+                <ul class="horizontal-list" id="list22"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Kethia Tshibuabua\IMG_1123.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Kethia Tshibuabua\IMG_1124.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Kethia Tshibuabua\IMG_1125.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Kethia Tshibuabua\IMG_0949.PNG" alt="pic 4">
+            </div>
+            <h3>KETHIA TSHIBUABUA</h3></footer>
+           <div class="list-container">
+                <ul class="horizontal-list" id="list23"></ul>
+                <ul class="horizontal-list" id="list24"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Aimerance BIN\IMG_0967.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Aimerance BIN\IMG_1203.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Aimerance BIN\IMG_1155.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Aimerance BIN\IMG_1202.PNG" alt="pic 4">
+            </div>
+            <h3>AIMERANCE BIN</h3>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list25"></ul>
+                <ul class="horizontal-list" id="list26"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Tina Kishiba\IMG_1146.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Tina Kishiba\IMG_1019.JPG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Tina Kishiba\IMG_1142.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Tina Kishiba\IMG_1226.PNG" alt="pic 4">
+            </div>
+            <h3>TINA KISHIBA</h3></footer>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list27"></ul>
+                <ul class="horizontal-list" id="list28"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Audrey Mwanaluma\IMG_1233.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Audrey Mwanaluma\IMG_1235.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Audrey Mwanaluma\IMG_1234.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Audrey Mwanaluma\IMG_1232.PNG" alt="pic 4">
+            </div>
+            <h3>AUDREY MWANALUMA</h3></footer>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list29"></ul>
+                <ul class="horizontal-list" id="list30"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Lionel Bwana\IMG_1213.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Lionel Bwana\IMG_1217.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Lionel Bwana\IMG_1211.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Lionel Bwana\IMG_1209.PNG" alt="pic 4">
+            </div>
+            <h3>LIONEL BWANA</h3>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list31"></ul>
+                <ul class="horizontal-list" id="list32"></ul>
+            </div>
+        </section>
+        <section class="model">
+            <h2 class="agorra-title">AGORRA</h2>
+            <div class="image-grid">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Phogene Sonyi\IMG_1220.PNG" alt="pic 1">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Phogene Sonyi\IMG_1220.PNG" alt="pic 2">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Phogene Sonyi\IMG_1220.PNG" alt="pic 3">
+                <img src="c:\Rch\AGORRA\Home\content\Mannequins\Phogene Sonyi\IMG_1220.PNG" alt="pic 4"> 
+            </div>
+            <h3>PHOGENE SONYI</h3>
+            <div class="list-container">
+                <ul class="horizontal-list" id="list33"></ul>
+                <ul class="horizontal-list" id="list34"></ul>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer">
+        <div class="footer-text">
+            <p>Agorra 2025 Tous droits reserves</p>
+        </div>
+    </footer>
+    <script>
+        const list1Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list2Items=["167","82","66","90","Noir","Marron","38"];
+        const list1=document.getElementById("list1");
+        const list2=document.getElementById("list2");
+        list1Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list1.appendChild(li);
+        });
+        list2Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list2.appendChild(li);
+        });
+
+        const list3Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list4Items=["174","94","81","160","Noir","Marron","43"];
+        const list3=document.getElementById("list3");
+        const list4=document.getElementById("list4");
+        list3Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list3.appendChild(li);
+        });
+        list4Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list4.appendChild(li);
+        });
+        
+        const list5Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list6Items=["170","82","68","90","Noir","Marron","39"];
+        const list5=document.getElementById("list5");
+        const list6=document.getElementById("list6");
+        list5Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list5.appendChild(li);
+        });
+        list6Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list6.appendChild(li);
+        });
+
+        const list7Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list8Items=["189","95","81","98","Noir","Marron","45"];
+        const list7=document.getElementById("list7");
+        const list8=document.getElementById("list8");
+        list7Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list7.appendChild(li);
+        });
+        list8Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list8.appendChild(li);
+        });
+
+        const list9Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list10Items=["173","84","64","91","Noir","Marron","39"];
+        const list9=document.getElementById("list9");
+        const list10=document.getElementById("list10");
+        list9Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list9.appendChild(li);
+        });
+        list10Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list10.appendChild(li);
+        });
+
+        const list11Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list12Items=["181","91","77","99","Noir","Marron","45"];
+        const list11=document.getElementById("list11");
+        const list12=document.getElementById("list12");
+        list11Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list11.appendChild(li);
+        });
+        list12Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list12.appendChild(li);
+        });
+
+        const list13Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list14Items=["182","85","73","93","Noir","Marron","43"];
+        const list13=document.getElementById("list13");
+        const list14=document.getElementById("list14");
+        list13Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list13.appendChild(li);
+        });
+        list14Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list14.appendChild(li);
+        });
+
+        const list15Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list16Items=["173","82","69","89","Noir","Marron","39"];
+        const list15=document.getElementById("list15");
+        const list16=document.getElementById("list16");
+        list15Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list15.appendChild(li);
+        });
+        list16Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list16.appendChild(li);
+        });
+
+        const list17Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list18Items=["171","81","64","91","Noir","Marron","39"];
+        const list17=document.getElementById("list17");
+        const list18=document.getElementById("list18");
+        list17Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list17.appendChild(li);
+        });
+        list18Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list18.appendChild(li);
+        });
+
+        const list19Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list20Items=["167","88","82","91","Noir","Marron","42"];
+        const list19=document.getElementById("list19");
+        const list20=document.getElementById("list20");
+        list19Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list19.appendChild(li);
+        });
+        list20Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list20.appendChild(li);
+        });
+        
+        const list21Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list22Items=["167","82","66","90","Noir","Marron","38"];
+        const list21=document.getElementById("list21");
+        const list22=document.getElementById("list22");
+        list21Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list21.appendChild(li);
+        });
+        list22Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list22.appendChild(li);
+        });
+
+        const list23Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list24Items=["171","80","63","90","Noir","Marron","40"];
+        const list23=document.getElementById("list23");
+        const list24=document.getElementById("list24");
+        list23Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list23.appendChild(li);
+        });
+        list24Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list24.appendChild(li);
+        });
+
+        const list25Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list26Items=["167","82","66","90","Noir","Marron","38"];
+        const list25=document.getElementById("list25");
+        const list26=document.getElementById("list26");
+        list25Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list25.appendChild(li);
+        });
+        list26Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list26.appendChild(li);
+        });
+
+        const list27Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list28Items=["167","82","66","90","Noir","Marron","38"];
+        const list27=document.getElementById("list27");
+        const list28=document.getElementById("list28");
+        list27Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list27.appendChild(li);
+        });
+        list28Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list28.appendChild(li);
+        });
+
+        const list29Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list30Items=["167","82","66","90","Noir","Marron","38"];
+        const list29=document.getElementById("list29");
+        const list30=document.getElementById("list30");
+        list29Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list29.appendChild(li);
+        });
+        list30Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list30.appendChild(li);
+        });
+
+        const list31Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list32Items=["167","82","66","90","Noir","Marron","38"];
+        const list31=document.getElementById("list31");
+        const list32=document.getElementById("list32");
+        list31Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list31.appendChild(li);
+        });
+        list32Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list32.appendChild(li);
+        });
+
+        const list33Items=["Taille", "Poitrine","Taille","Hanche","Cheveux","Yeux","Pointure"];
+        const list34Items=["167","82","66","90","Noir","Marron","38"];
+        const list33=document.getElementById("list33");
+        const list34=document.getElementById("list34");
+        list33Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list33.appendChild(li);
+        });
+        list34Items.forEach(text=>{
+            const li=document.createElement("li");
+            li.textContent=text;
+            list34.appendChild(li);
+        });
+    </script>
+</body>
+</html>
+    

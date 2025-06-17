@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGORRA</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .site-header{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: whitesmoke;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+    .logo{
+      color: #111;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav{
+      display: flex;
+      gap: 20px;
+    }
+    .nav a{
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .menu-toggle{
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+      color: #111;
+    }
+    .hero{
+      height: 100vh;
+      background: url('./IMG_0228.JPG') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 100px;
+      text-align: center;
+      color: white;
+    }
+    .hero h1{
+      color: yellowgreen;
+      font-size: 48px;
+      margin-bottom: 0;
+      padding-top: 120px;
+    }
+    .hero p{
+      color: #111;
+      font-size: 20px;
+    }
+    .featured{
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 60px 20px;
+      padding-top: 100px;
+      justify-content: center;
+    }
+    .featured-box1{
+      flex: 1 1 300px;
+      max-width: 300px;
+      height: 200px;
+      background: white;
+      background-image: url(./content/Maliapics/IMG_2233.JPG);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      text-align: center;
+      padding: 28px;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: bold;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    .featured-box2{
+      flex: 1 1 300px;
+      max-width: 300px;
+      height: 200px;
+      background: white;
+      background-image: url(./content/picsbienalepics/IMG_0259.JPG);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      text-align: center;
+      padding: 28px;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: bold;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    .featured-box3{
+      flex: 1 1 300px;
+      max-width: 300px;
+      height: 200px;
+      background: white;
+      background-image: url(./content/AfrilabsPics/IMG_7020.PNG);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      text-align: center;
+      padding: 28px;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: bold;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    .featured-box3 a{
+      color: whitesmoke;
+    }
+    .featured-box4{
+      flex: 1 1 300px;
+      max-width: 300px;
+      height: 200px;
+      background: white;
+      background-image: url(./content/Fashionweekpics/IMG_0286.JPG);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      text-align: center;
+      padding: 28px;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: bold;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+     .featured-box4 a{
+      color: white;
+    }
+    a{
+      color: gray;
+    }
+    .about{
+      background: #fafafa;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .about h2{
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    .site-footer{
+      background: #425e83;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .site-footer .socials a{
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    @media(max-width: 768px){
+      .nav{
+        display: none;
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      }
+      .nav.active{
+        display: flex;
+      }
+      .menu-toggle{
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">AGORRA</div>
+    <nav class="nav" id="nav">
+      <a href="#">Home</a>
+      <a href="#">Collections</a>
+      <a href="./Public/about.html.html">About</a>
+      <a href="./Public/contact.html.html">Contact</a>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">&#9776</div>
+  </header>
+  <section class="hero">
+    <h1>Un style Unique</h1>
+    <p>style Audacieux/ Tendance infinie</p>
+  </section>
+  <section class="featured">
+    <div class="featured-box1">
+      <h3><a href="./Public/malia.html.html">Malia, la mode une vie!</a></h3>
+    </div>
+    <div class="featured-box2">
+      <h3><a href="./Public/Biennale.html.html">
+            Biennnale de Lubumbashi</a>
+      </h3>
+    </div>
+    <div class="featured-box3">
+      <h3><a href="./Public/fashowafrilabs.html.html">
+            AFRILABS</a>
+      </h3>
+    </div>
+    <div class="featured-box4">
+      <h3><a href="./Public/fashionweek.html.html" >Lubumbashi Fashion Week</a></h3></div>
+  </section>
+  <section class="about">
+    <h2>Qu'est-ce qu'est AGORRA?</h2>
+    <p>La mode c'est plus que des habits, c'est un art de s'exprimer.
+       Nous proposons d'audacieuses cretions africaines melangees a 
+       de l'elegance moderne
+    </p>
+  </section>
+  <footer class="site-footer">
+    <h3>Lydia Katanga</h3>
+    <p>Follow us on socials</p>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Tiktok</a>
+    </div>
+  </footer>
+  <script>
+    const menutoggle=document.getElementById("men-toggle");
+    const nav=document.getElementById("nav");
+    menuToggle.addEventListener("click",()=>{
+      nav.classList.toggle("atcive");
+    });
+  </script>
+</body>
+</html>

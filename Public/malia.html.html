@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malia</title>
+    <style>
+        @media (max-width: 600px){
+            body{
+                background-color: #316B77;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 900px){
+            body{
+                background-color: #316B77;
+            }
+        }
+        @media (min-width: 901px) and (max-width: 1200px){
+            body{
+                background-color: #316B77;
+            }
+        }
+        @media (min-width: 1201px) {
+            body{
+                background-color: #316B77;
+            }
+        }
+        *{
+            box-sizing:border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .page-header{
+            background: linear-gradient(to right, #111, #444);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        .page-header h1{
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: 'Helvetica Neue' sans-serif;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 600px){
+            .page-header h1{
+                font-size: 1.8rem;
+            }
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            text-align: center;
+            max-width: 100%;
+            padding: 20px;
+            padding-top: 80px;
+        }
+        .top-section{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        p{
+            color: white;
+        }
+        .top-section{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .left-image img{
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        .right-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 350px;
+            text-align: center;
+        }
+        .right-section p{
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .right-section img {
+            width: 300px;
+            max-width: 350px;
+            height: auto;
+        }
+        .bottom-text{
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .album{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            max-width: 100%;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .top-img, .bottom-img{
+            width: 450px;
+            max-width: 100%;
+        }
+        .top-img{
+            height: 650px;
+        }
+        .full-img{
+            width: 1050px;
+            max-width: 100%;
+            height: 650px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        @media(max-width: 1000px){
+            .row{
+                flex-direction: column;
+                align-items: center;
+            }
+            .full-img{
+                height: auto;
+            }
+        }
+        .page-footer{
+            width: 100%;
+            background-color: #425E83;
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            font-style: bold;
+            margin-top: 100px;
+        }
+        .footer-text{
+            backdrop-filter: brightness(0.5);
+            padding: 50px;
+        }
+        @media(max-width: 600px){
+            .footer-text{
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <h1>MALIA, LA MODE UNE VIE</h1>
+    </header>
+    <div class="container">
+        <div class="top-section">
+            <div class="left-image">
+                <img src="c:\Rch\AGORRA\Home\content\Maliapics\IMG_2233.JPG" alt="pic 1">
+            </div>
+            <div class="right-section">
+                 <p>Malia, La mode une vie est un film<br />
+                   dramatique de mode racontant l'histoire<br /> 
+                   d'une keune femmme passionee par la mode,<br />
+                   qui reve de devenir mannequin. Cependant,<br />
+                   Sa mere, convaincu que seul un parcours<br />
+                   academique peut lui assurer un avenir<br />
+                   stable, insiste pour qu'elle poursuive des<br /> 
+                   etudes de droit. Tiraillee entre son ambition<br />
+                   et les attentes familiales, Malia doit<br /> 
+                   affronter les obstacles sociaux et<br /> 
+                   personnels pour trouver sa voie. entre<br />
+                   desilusions, sacrifices et moments d'espoir,<br /> 
+                   son parcours illustre le combat de<br />
+                   nombreuses jeunes femmes qui aspirent a<br />
+                   une carriere artistique dans un<br />
+                   environnemnt ou la reussite est souvent<br /> 
+                   definie par des chemins plus traditionnels<br />
+                </p>
+                <img src="c:\Rch\AGORRA\Home\content\Maliapics\IMG_2236.JPG" alt="pic 2">
+            </div>
+        </div>
+        <div class="bottom-text">
+            <p>Le 06 decembre 2024, la salle de cinema Climax a ete le theatre d'un evenement marquant avec la<br />
+                projection en avant-premiere du film Malia, la mode une vie. Ce moment a reuni un large eventail de <br />
+                personnalites issues de divers horizons: professionels de la mode, entrepreneurs, artistes et <br />
+                cinephiles passionnes... Tous ont eu l'opportunite de decouvrir ce film tant attendu, avant de participer<br />
+                a un panel enrichissant sur l'entrepreneuriat dans le domaine de la mode dans notre millieu, un sujet qui <br />
+                a suscite de vifs echanges et reflexions. Les discussions lors du panel ont permis de mieux comprendre <br />
+                les enjeux et les defis de l'industrie de la mode dans notre region, tout en mettant en lumiere les <br />
+                opportunites qui s'offrent a ceux qui souhaitent y investir. La sortie officielle de Malia, la mode une vie<br />
+                est imminente. Restez conectes pour etre parmi les premiers a le decouvrir !<br />
+            </p>
+        </div>
+    </div>
+    <div class="album">
+        <div class="row">
+            <div class="top-img">
+                <img src="c:\Rch\AGORRA\Home\content\Maliapics\IMG_1305.JPG" alt="Top image 1">
+            </div>
+            <div class="top-img">
+                <img src="c:\Rch\AGORRA\Home\content\Maliapics\IMG_1223.JPG" alt="Top image 2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="bottom-img">
+                <img src="c:\Rch\AGORRA\Home\content\Maliapics\IMG_1296.JPG" alt="Botton image 1">
+            </div>
+            <div class="bottom-img">
+                <img src="c:\Rch\AGORRA\Home\content\Maliapics\IMG_1258.JPG" alt="Bottom image 2">
+            </div>
+        </div>
+        <div class="full-img">
+            <img src="c:\Rch\AGORRA\Home\content\Maliapics\IMG_1289.JPG" alt="Full Bottom imagr">
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="footer-text">
+            <p>Agorra 2025 Tous droits reserves</p>
+        </div>
+    </footer>
+</body>
+</html>
