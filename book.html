@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mannequin Book - AGORRA</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Georgia", serif;
+        }
+        body{
+            background: #fff;
+            color: #111;
+            line-height: 1.6;
+        }
+        header{
+            background: #111;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1{
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        nav{
+            display: flex;
+            gap: 20px;
+        }
+        nav a{
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        nav a:hover{
+            color: #ccc;
+        }
+        .book{
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .model-card{
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .model-card img{
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            background: #f8f8f8;
+        }
+        .model-card h2{
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 15px 0;
+        }
+        .info-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+        .info-grid div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .info-grid div span:first-child{
+            font-weight: bold;
+            margin-bottom: bold;
+        }
+        footer{
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p{
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Agorra</h1>
+        <nav>
+            <a href="./home2.html">HOME</a>
+            <a href="./about.html">PROFIL</a>
+            <a href="./events.html">EVENTS</a>
+            <a href="./book.html">BOOK</a>
+        </nav>
+    </header>
+
+    <section class="book-grid">
+        <div class="model-card">
+            <img src="./Aimerance BIN/IMG_1155.PNG" alt="Aimerance Bin">
+            <h2>AIMERANCE BIN</h2>
+            <div class="info-grid">
+                <div><span>Taille</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Abiagael Chiam/IMG_1164.PNG" alt="Abigael Chiam">
+            <h2>ABIGAEL CHIAM</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Audrey Mwanaluma/IMG_1233.PNG" alt="Audrey Mwanaluma">
+            <h2>AUDREY MWANALUMA</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Kethia Tshibuabua/IMG_1123.PNG" alt="Kethia Tshibuabua">
+            <h2>KETHIA TSHIBUABUA</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Migrael Luatianakio/IMG_1150.PNG" alt="Migrael Luatianakio">
+            <h2>MIGRAEL LUATIANAKIO</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Rose Kadinga/IMG_0970.PNG" alt="Rose Kadinga">
+            <h2>ROSE KADINGA</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Sandy Meyers/IMG_1141.PNG" alt="Sandy Meyers">
+            <h2>SANDY MEYERS</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Tina Kishiba/IMG_1142.PNG" alt="Tina Kishiba">
+            <h2 class="model-name">TINA KISHIBA</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Tyty Francine/IMG_1147.PNG" alt="Tyty Francine">
+            <h2>TYTY FRANCINE</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Bless Kongolo/IMG_0981.PNG" alt="Bless Kongolo">
+            <h2>BLESS KONGOLO</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Christian Salomon KAPAKO/IMG_0987.PNG" alt="Christian">
+            <h2>CHRISTIAN &nbsp; SALOMON &nbsp; KAPAKO</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Dan Piema/IMG_1204.PNG" alt="Dan Piema">
+            <h2>DAN &nbsp; PIEMA</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Junior Doki/IMG_0991.PNG" alt="Junior Doki">
+            <h2 class="model-name">JUNIOR &nbsp; DOKI</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Paul Mputu/IMG_1215.PNG" alt="Paul Mputu">
+            <h2>PAUL &nbsp; MPUTU</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Phogene Sonyi/IMG_1220.PNG" alt="Phogene Sonyi">
+            <h2>PHOGENE &nbsp; SONYI</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img src="./Victor Lukusa/IMG_0978.PNG" alt="Victor Lukusa">
+            <h2>VICTOR &nbsp; LUKUSA</h2>
+            <div class="info-grid">
+                <div><span>Taillee</span><span>171</span></div>
+                <div><span>Poitrine</span><span>83</span></div>
+                <div><span>Taille</span><span>68</span></div>
+                <div><span>Hanche</span><span>93</span></div>
+                <div><span>Cheveux</span><span>Noir</span></div>
+                <div><span>Yeux</span><span></span>Marron</div>
+                <div><span>Poitrine</span><span></span>39</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;<span id="year">AGORRA. Tous droits réservés</span>
+    </footer>
+    <script>
+        document.getElementById("year").textContent=newDate().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biennale de Lubumbashi: Toxicity 2022</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "Times New Roman" serif;
+            background: #f9f9f9;
+            color: #111;
+            line-height: 1.7;
+        }
+        header{
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem;
+        }
+        .header-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .logo{
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav{
+            display: flex;
+            gap: 1.2rem;
+        }
+        nav a{
+            text-decoration: none;
+            color: #111;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover{
+            color: #666;
+        }
+        .menu-toggle{
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-toggle span{
+            height: 3px;
+            width: 25px;
+            background: #111;
+            margin: 4px 0;
+            border-radius: 2px;
+        }
+        .page-title{
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .content-item img{
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .content-item p{
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #333;
+        }
+        .gallery{
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+        .gallery h2{
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+        .gallery-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery-grid img{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;          
+        }
+        .gallery-grid img:hover{
+            transform: scale(1.05);
+        }
+        footer{
+            margin-top: 3rem;
+            background: #111;
+            color: #f9f9f9;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        @media(max-width: 768px){
+            nav{
+                display: none;
+                flex-direction: column;
+                background: #fff;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                width: 200px;
+                border: 1px solid #ddd;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                padding: 1rem;
+            }
+            nav.active{
+                display: flex;
+            }
+            .menu-toggle{
+                display: flex;
+            }
+            .content{
+                grid-template-columns: 1fr;
+            }
+            .page-title{
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">AGORRA</div>
+            <nav id="nav-links">
+                <a href="./home2.html">HOME</a>
+                <a href="./about.html">PROFIL</a>
+                <a href="./book.html">BOOK</a>
+                <a href="./events.html">EVENEMENTS</a>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="page-title">
+            BIENNALE DE LUBUMBASHI: Toxicity 2022
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="content-item">
+               <img src="./picsbienalepics/IMG_0262.JPG" alt="image 1">
+               <p>En 2022, l'agence de mode Agorra a participé à la 7e
+                  Biennale de Lubumbashi, un événement artistique
+                  important organisé par le centre d'Art Picha. Cette 
+                  édition, sur le thème "Toxicity", a examiné
+                  comment les actions humaines affectent
+                  l'environnement en mettant en avant les 
+                  différentes formes de pollution et destruction. 
+                </p>
+
+                <p>Dans ce cadre, Agorra a presenté un défilé de mode 
+                   unique au village Makwacha. L'agence, fidèle à son 
+                   engagement pour une mode avec un sens, a fait de 
+                   cette performance une véritable oeuvre artistique, 
+                   où les créations portaient un message fort sur la
+                   dégradation de la planète 
+                </p>
+                <p>Les mannequins ont défilé en pleine nature, en 
+                   accord avec le thème de l'événement.
+                </p>  
+            </div>
+            <div class="content-item">
+                <img src="./picsbienalepics/IMG_0259.JPG" alt="image 2">
+                <p>Le choix du village Michwaka, avec son
+                   environnement traditionnel, constrastait avec l'idée
+                   de toxicité, soulignant l'importance de protéger les 
+                   espaces encore preservés 
+                </p>
+
+                <p>Cette participation a permis à Agorra de montrer 
+                   son engagement envers une mode qui prend en
+                   compte les realites sociales et environnementales,
+                   tout en reflechissant à l'impact de l'industrie et de
+                   la consommation sur notre ecosysteme. Cela a 
+                   aussi renforcé son lien avec l'art, en creant un 
+                   dialogue entre la mode, l'art et les préccopations 
+                   d'aujourd'hui.
+                </p>
+
+                <p>Avec cette collaboration à la Biennale de
+                   Lubumbashi, Agorra a prouvé que la mode peut signifier 
+                   un outil puissant de sensibilisation, capable de faire
+                   réagir sur des enjeux essentiels comme l'écologie
+                   et la responsabilité collective
+                </p>
+            </div>
+        </div>
+        <section class="gallery">
+            <h2>Gallerie</h2>
+            <div class="gallery-grid">
+               <img src="./picsbienalepics/IMG_0256.JPG" alt="Gallery 1">
+               <img src="./picsbienalepics/IMG_0258.JPG" alt="Gallery 2">
+               <img src="./picsbienalepics/IMG_0261.JPG" alt="Gallery 3">
+               <img src="./picsbienalepics/IMG_0257.JPG" alt="Gallery 4">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="year">2024</span>Biennale de Lubumbashi. Tous droits réservés.</p>
+    </footer> 
+    <script>
+        document.getElementById("year").textContent=newDate().getFullYear();
+        const toggle=document.getElementById("menu-toggle");
+        const nav=document.getElementById("nav-links");
+        toggle.addEventListener("click", ()=>{
+            nav.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

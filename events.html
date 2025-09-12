@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agorra-Events Presentation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Times New Roman', serif;
+            background: #f9f9f9;
+            color: #111;
+            line-height: 1.6;
+        }
+        header{
+            background: #fff;
+            border-radius: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem;
+        }
+        .header-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .logo{
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav{
+            display: flex;
+            gap: 1.2rem;
+        }
+        nav a{
+            text-decoration: none;
+            color: #111;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover{
+            color: #666;
+        }
+        .menu-toggle{
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-toggle span{
+            height: 3px;
+            width: 25px;
+            background: #111;
+            margin: 4px;
+            border-radius: 2px;
+        }
+        .page-title{
+            text-align: center;
+            padding: 1.5rem;
+        }
+        .page-title h1{
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .page-title h3{
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-top: 0.5rem;
+            color: #555;
+        }
+        .events-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 110px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .event-box{
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3 ease;
+        }
+        .event-box:hover{
+            transform: translateY(-6px);
+        }
+        .event-box img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .event-box-content{
+            padding: 1rem;
+        }
+        .event-box h2{
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .event-box p{
+            font-size: 0.95rem;
+            color: #444;
+        }
+        footer{
+            margin-top: 3rem;
+            background: #111;
+            color: #f9f9f9;
+            padding: 1.2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        @media(max-width: 768px){
+            nav{
+                display: none;
+                flex-direction: column;
+                background: #fff;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                width: 200px;
+                border: 1px solid #ddd;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                padding: 1rem;
+            }
+            nav.active{
+                display: flex;
+            }
+            .menu-toggle{
+                display: flex;
+            }
+            .page-title h1{
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Menu</div>
+            <nav id="nav-links">
+                <a href="./home2.html">HOME</a>
+                <a href="./about.html">PROFIL</a>
+                <a href="./book.html">BOOK</a>
+                <a href="./events.html">EVENTS</a>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span>
+            </div>
+        </div>
+        <div class="page-title">
+           <h1>AGORRA</h1>
+           <h3>Nos Evenements</h3>
+        </div>
+    </header>
+    <main>
+        <div class="events-grid">
+            <div class="event-box">
+                <a href="./Biennale.html" class="event-box">
+                   <img src="./pics/IMG_0262.JPG" alt="Biennale de Lubumbashi">
+                   <div class="event-box-content">
+                      <h2>BIENNALE DE LUBUMBASHI</h2>
+                      <p>Un défilé de mode sur le thème de la toxicité</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="events-grid">
+            <div class="event-box">
+                <a href="./fashowafrilabs.html" class="event-box">
+                    <img src="./pics/IMG_7023.PNG" class="event-image" alt="cultural even0t">
+                    <div class="event-box-content">
+                        <h2>FASHION SHOW AFRILABS</h2>
+                        <p>Un festival culturel unique</p> 
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="events-grid">
+            <div class="event-box">
+                <a href="./malia.html" class="event-box">
+                    <img src="./pics/IMG_2233.JPG" class="event-image" alt="movie event">
+                    <div class="event-box-content">
+                        <h2>MALIA, LA MODE UNE VIE</h2>
+                        <p>Introduction sur ce film tant attendu</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="year">2025</span>Agorra. Tous droits réservés.</p>
+    </footer>
+    <script>
+        document.getElementById("year").textContent=newDate().getFullYear();
+        const toggle=document.getElementById("menu-toggle");
+        const nav=document.getElementById("nav-links");
+        toggle.addEventListener("click", ()=>{
+            nav.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Lubumbashi Fashion Week</title>
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: "Times New Roman" serif;
+      background: #f9f9f9;
+      line-height: 1.7;
+    }
+    header{
+      padding-top: 100px;
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 1px solid #ccc;
+    }
+    header h1{
+      font-size: 2.8rem;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+    header h3{
+      margin-top: 0.5rem;
+      letter-spacing: 1.3rem;
+      font-style: italic;
+      color: #555;
+    }
+    main{
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    p{
+      margin-bottom: 1.2rem;
+      font-size: 2rem auto;
+      padding: 0 1rem; 
+    }
+    p{
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+    main img{
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+    }
+    .team-section{
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .team-section h2{
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
+    }
+    .team-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .team-member{
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .team-member:hover{
+      transform: translateY(-5px);
+    }
+    .team-member img{
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .team-member h3{
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+    .team-member p{
+      font-size: 1rem;
+      color: #666;
+    }
+    footer{
+      margin-top: 3rem;
+      background: #111;
+      color: #f9f9f9;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    @media(max-width: 768px){
+      header h1{
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">AGORRA</div>
+    <div class="menu-toggle">&#9776;</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="./home2.html">HOME</a></li>
+        <li><a href="./book.html">BOOK</a></li>
+        <li><a href="./events.html">EVENEMENTS</a></li>
+        <li><a href="./about.html">PROFIL</a></li>
+      </ul>
+    </nav>
+    <h1>DECOUVREZ AGORRA</h1>
+    <h3>NOTRE HISTOIRE</h3>
+  </header>
+  <main>
+    <h3>NOTRE HISTOIRE</h3>
+    <p>
+      AGORRA est une industrie culturelle et créative qui
+      oeuvre à promouvoir la mode congolaise à travers
+      ses événements et la commercialisation des 
+      services de ses mannequins. En acivité depuis 
+      janvier 2022, l'agence a organisé trois éditions de 
+      la fashion Week dans la ville de Lubumbashi dont la 
+      dernière en septembre 2024 en partenariat avec 
+      l'institut Francais de Lubumbashi et une 
+      participation remarquée à la 7e biennale de
+      Lubumbashi au défile de mode du village 
+      Makwacha en octobre 2022.  
+    <p>
+    <p>
+      Notre objectif est de recruter et former des 
+      personnes ayant des ambitions de carrière
+      professionnelle dans le domaine de la mode 
+      dont tous les acteurs de la mode entre autre 
+      stylistes, mannequins, maquilleurs, coiffeurs,
+      accessoiristes, photographes et les medias 
+      dans la valorisation de l'industrie de la mode
+      en RDC;
+      Nous avons collaboré avec multiples artistes 
+      musiciens du pays et différentes entreprises 
+      de la place.
+    </p>
+    <img src="./IMG_1392.JPG" alt="AGORRA Image" />
+    <section class="team-section">
+      <h2>Notre Equipe</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="./Team/IMG_0159.JPG" alt="Lydia Katanga">
+          <h3>Lydia KATANGA</h3>
+          <p>Présidente directrice générale</p>
+        </div>
+        <div class="team-member">
+          <img src="./Team/IMG_4774.JPG" alt="Bedusei Mambu">
+          <h3>Bedusei MAMBU</h3>
+          <p>Directeur artistique</p>
+        </div>
+        <div class="team-member">
+          <img src="./Team/IMG_0508.JPG" alt="Junior Doki">
+          <h3>Junior DOKI</h3>
+          <p>Directeur Marketing</p>
+        </div>
+        <div class="team-member">
+          <img src="./Team/IMG_0119.JPG" alt="Rose KADINGA">
+          <h3>Rose KANDINGA</h3>
+          <p>Secrétaire administrative</p>
+        </div>
+        <div class="team-member">
+          <img src="./Team/IMG_4883.JPG" alt="Salem Lumbu">
+          <h3>Salem Lumbu</h3>
+          <p>Chargé des finances</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy;<span id="year"></span>DECOUVREZ AGORRA. Tous droits réservés</p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent=newDate().getFullYear();
+  </script>
+</body>
+</html>

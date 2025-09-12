@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" a href="./CSS/styles.css">
+  <script src="./JC/Untitled-1.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Agorra</div>
+    <div class="menu-toggle">&#9776;</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="./home2.html">HOME</a></li>
+        <li><a href="./book.html">BOOK</a></li>
+        <li><a href="./events.html">EVENEMENTS</a></li>
+        <li><a href="./about.html">PROFIL</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="contact">
+    <h2>Contactez-nous</h2>
+    <div id="contact-success" class="notice" style="display: none;">
+      Votre message a été envoyé. Merci!
+    </div>
+    <form method="POST" action="save_message.php" id="contactForm" novalidate>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="text" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="text" name="website" autocomplete="off" tabindex="-1"
+      style="position:absolute;left: -9999px;opacity: 0;"aria-hidden="true">
+      <button type="submit">Envoyez un message</button>
+    </form>
+  </section>
+  <footer class="footer">
+    <p>&copy;<span id="year"></span>Agorra. Tous Droits réservés</p>
+    <a href="./contact.html">Contactez-nous</a>
+  </footer>
+  <script src="./JC/Untitled-1.js"></script>
+</body>
+</html>
