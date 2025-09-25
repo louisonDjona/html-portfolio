@@ -5,52 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agorra-Homepage</title>
     <link rel="stylesheet" href="./CSS/styles.css">
-    <script defer src="./JC/Untitled-1.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">AGORRA</div>
-        <div class="menu-toggle">&#9776;</div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="./home2.html">HOME</a></li>
-                <li><a href="./book.html">BOOK</a></li>
-                <li><a href="./events.html">EVENEMENTS</a></li>
-                <li><a href="./about.html">PROFIL</a></li>
-            </ul>
+    <header>
+        <div class="brand">
+            <div class="logo">AGORRA</div>
+            <div style="font-size: 12px;color: var(--muted)">AGORRA Style</div>
+        </div>
+        <nav>    
+            <div class="menu-toggle" id="menuToggle" aria-label="menu toggle" role="button">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="navlinks" id="navLinks">
+                <a href="./home2.html">Home</a>
+                <a href="./about.html">Profil</a>
+                <a href="./book.html">Book</a>
+                <a href="./events.html">Events</a>
+            </div>
         </nav>
     </header>
-    <section class="teaser">
-        <video autoplay muted loop>
-            <source src="./teaser.mp4" type="video/mp4">
-            Your browser does not support the video. </video>
-        </video>
-        <div class="teaser-overlay">
-            <h1>Bienvenu sur Agorra</h1>
-            <p>Let's change your style</p>
+    <main>
+        <section class="hero">
+            <video autoplay muted loop playsinline src="./teaser.mp4" aria-hidden="true"></video>
+            <div class="hero-overlay fade-in">
+                <h1>Bienvenu sur Agorra</h1>
+                <p>Let's change your style</p>
+                <a class="cta" href="./events.html">Explore</a>
+            </div>
+        </section>
+        <section class="section" id="features">
+            <div class="features">
+                <article class="feature fade-in" style="animation-delay: .1s;\">
+                    <img src="./FA 2025/IMG_2180.jpg" alt="Feature 1">
+                    <div class="body">
+                        <h2>Lushi Fashion Week 2025</h2>
+                        <p>Le plus grand evenement de mode a Lubumbashi. <a href="./fashionweek2025.html">En savoir plus</a></p>
+                    </div>
+                </article>
+                <article class="feature fade-in" style="animation-delay: .25s">
+                    <img src="./Fashionweekpics/IMG_0284.JPG" alt="Feature 2">
+                    <div class="body">
+                        <h2>Lushi Fashion Week 2024</h2>
+                        <p>Le plus grand evenement de mode a Lubumbashi. <a href="./fashionweek.html">En savoir plus</a></p>
+                    </div>
+                </article>
+            </div>
+            <div class="rubric" aria-label="rubric">
+                <div class="card fade-in" style="animation-delay: .35s">
+                    <div style="font-size: 32px; font-weight: 700">01</div>
+                    <h3>Passerelle</h3>
+                    <p>Connect designers and models for events.</p>
+                </div>
+                <div class="card fade-in" style="animation-delay: .45s">
+                    <div style="font-size: 32px;font-weight: 700">02</div>
+                    <h3>Collections</h3>
+                    <p>Showcase seasonal collections with editorial flair.</p>
+                </div>
+                <div class="card fade-in" style="animation-delay: .55s">
+                    <div style="font-size: 32px;font-weight: 700">03</div>
+                    <h3>Evenements</h3>
+                    <p>Create and manage high-style events.</p>
+                </div>
+                <div class="card fade-in" style="animation-delay: .65s">
+                    <div style="font-size: 32px;font-weight: 700">04</div>
+                    <h3>Profil</h3>
+                    <p>Personalized profiles and lookbooks</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div style="font-family: Playfair Display, serif;font-weight: 700;font-size: 20px">Agorra</div>
+                <div style="margin-top: 8px; color: var(--muted); font-size: 14px">Vogue-inspired fashion platform</div>
+            </div>
+            <div class="social">
+                <a href="">Instagram</a>
+                <a href="">Tiktok</a>
+                <a href="">Contact</a>
+            </div>
+            <div style="min-width: 160px;text-align: right;color: var(--muted)">
+                <div>&copy;<span id="year"></span>Agorra</div>
+            </div>
         </div>
-    </section>
-    <section class="features">
-        <article class="feature">
-            <img src="./FA 2025/IMG_2180.jpg" alt="Feature 1">
-            <h2>Fashion Week 2025</h2>
-            <p><a href="./fashionweek2025.html">Decouvrez-en plus sur cet evenement</a></p>
-        </article>
-        <article class="feature">
-            <img src="./Fashionweekpics/IMG_0284.JPG">
-            <h2>Fashion Week 2024</h2>
-            <p><a href="./fashionweek.html">Decouvrez-en plus sur cet evenement</a></p>
-        </article>
-    </section>  
-    <section class="rubrics">
-        <div class="rubric"><img src="./IMG_0009.JPG"><h3>New collection</h3></div>
-        <div class="rubric"><img src="./IMG_0259.JPG"><h3>Street style</h3></div>
-        <div class="rubric"><img src="./IMG_0266.JPG"><h3>Designer Spotlight</h3></div>
-        <div class="rubric"><img src="./IMG_0841.JPG"><h3>Fashion Tips</h3></div>
-    </section>
-    <footer class="footer">
-        <p>&copy;<span id="year">2025</span>Agorra. Tous Droits réservés</p>
-        <a href="./contact.html">Contactez-nous</a>
     </footer>
+    <script>
+        document.getElementById('year').textContent=newDate().getFullYear();
+        const menuToggle=document.getElementById('menuToggle');
+        const navLinks=document.getElementById('navLinks');
+        menuToggle.addEventListener('click',()=>{
+            navLinks.classList.toggle('show');
+            menuToggle.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+            if(window.innerWidth<640)navLinks.classList.remove('show');
+        }));
+        document.addEventListener('keydown', (e)=>{
+            if(e.key==='Escape') navLinks.classList.remove('show');});
+            const io=new IntersectionObserver((entries)=>{
+                entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+            }, {threshold: .12});
+            document.querySelectorAll('fade-in').forEach(el=>{io.observe(el); 
+                el.style.transition='opacity .8s, transform .6s';});
+    </script>
 </body>
 </html>

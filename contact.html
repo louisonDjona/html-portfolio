@@ -3,40 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Me</title>
-  <link rel="stylesheet" a href="./CSS/styles.css">
-  <script src="./JC/Untitled-1.js"></script>
+  <title>Contact-Agorra</title>
+  <style>
+    body{
+      font-family: Inter, Arial;
+      margin: 0;
+      background: linear-gradient(180deg, #fff, #f7f5f7);
+      color: #111;
+    }
+    header{
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wrap{
+      max-width: 900px;
+      margin: 36px auto;
+      padding: 20px;
+    }
+    form{
+      background: #fff;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(10,10,10,0.06);
+    }
+    label{
+      display: block;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+    input, textarea{
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #e6e6e6;
+      margin-top: 6px;
+    }
+    button{
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: #111;
+      color: #fff;
+      border: 0;
+      font-weight: 700;
+    }
+    .success{
+      background: #e6ffef;
+      border-left: 4px solid #00a651;
+      padding: 12px;
+      margin-top: 12px;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="logo">Agorra</div>
-    <div class="menu-toggle">&#9776;</div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="./home2.html">HOME</a></li>
-        <li><a href="./book.html">BOOK</a></li>
-        <li><a href="./events.html">EVENEMENTS</a></li>
-        <li><a href="./about.html">PROFIL</a></li>
-      </ul>
-    </nav>
+  <header>
+    <div style="font-family: Playfair Display, serif; font-weight: 700;">AGORRA</div>
+    <div><a href="./home2.html">IJ Retour</a></div>
   </header>
-  <section class="contact">
+  <main class="wrap">
     <h2>Contactez-nous</h2>
-    <div id="contact-success" class="notice" style="display: none;">
-      Votre message a été envoyé. Merci!
-    </div>
-    <form method="POST" action="save_message.php" id="contactForm" novalidate>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="text" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <input type="text" name="website" autocomplete="off" tabindex="-1"
-      style="position:absolute;left: -9999px;opacity: 0;"aria-hidden="true">
-      <button type="submit">Envoyez un message</button>
+    <p>Remplissez le formulaire ci-dessous pour nous envoyer un message.</p>
+    <form id="contactForm">
+      <label for="name">Nom</label>
+      <input id="name" name="name" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+      <button type="submit">Envoyer</button>
+      <div id="status"></div>
     </form>
-  </section>
-  <footer class="footer">
-    <p>&copy;<span id="year"></span>Agorra. Tous Droits réservés</p>
-    <a href="./contact.html">Contactez-nous</a>
-  </footer>
+    <p style="margin-top: 18px; color: #6b6b6b;">Note: This form will try to POST to <code>/submit-contact</code>. If you don't have a backend yet, the page will save a draft locally(localStorage).</p>
+  </main>
+  <script>
+    const form=document.getElementById('contactForm');
+    const status=document.getElementById('status');
+    form.addEventListener('submit', async(e)=>{
+      e.preventDefault();
+      const data={
+        name: form.name.value.trim(), email: form.email.value.trim(), message: form.message.value.trim(), created_at: new Date().toISOString()
+      };
+      try{
+        const res = await fetch('/submit-contact',{
+          method: 'POST', headers:{
+            'Content-type': 'application/json'}, body: JSON.stringify(data)
+          });
+          if(res.ok){
+            status.innerHTML = '<div class="success">Message envoy - merci !</div>'; form.reset(); return;}
+          }catch(err){}
+          const drafts = JSON.parse(localStorage.getItem('agorra_contacts')||`[]`);
+          drafts.push(data);
+          localStorage.setItem('agorra_contacts', JSON.stringify(drafts));
+          status.innerHTML = '<div class="success">Hors-line: message sauvegardé localement. Il sera envoye quand vous aurez configure un backend.</div>';
+          form.reset;
+      });
+  </script>
 </body>
 </html>

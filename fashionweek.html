@@ -5,471 +5,302 @@
   <title>LUBUMBASHI FASHION WEEK</title>
   <style>
     *{
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
-    :root{
-      --bg: #f8f8f8;
-      --text: #111;
-      --muted: #666;
-      --card: #ffffff;
-      --border: #e5e5e5;
-      --shadow: 0 6px 18px rgba(0,0,0,.08);
-      --radius: 16px;
-      --maxw: 1200px
-    }
-    html, body{
-      height: 100%;
+      box-sizing: border-box;
     }
     body{
-      font-family: "Times New Roman", Georgia, serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    img{
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    a{
-      color: inherit;
-      text-decoration: none;
+      font-family: 'Didot', serif;
+      color: #111;
+      background: #f8f8f8;
     }
     header{
+      background: #000;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: #fff;
-      border-radius: 1px solid var(--border);
+      z-index: 1000;
     }
-    .header-wrap{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 12px 16px;
-    }
-    .header-bar{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .site-title{
-      font-size: 28px;
-      letter-spacing: 2px;
-      font-weight: 700;
+    header h1{
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+      font-weight: bold;
     }
     nav{
       display: flex;
-      gap: 20px;
+      gap: 25px;
     }
     nav a{
-      font-size: 15px;
-      position: relative;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
-    nav a::after{
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      width: 0;
-      height: 1px;
-      background: #000;
-      transition: width .3s ease;
-    }
-    nav a:hover::after{
-      width: 100%;
+    nav a:hover{
+      color: #d4af37;
     }
     .menu-toggle{
       display: none;
+      flex-direction: column;
       cursor: pointer;
-      padding: 8px;
     }
     .menu-toggle span{
-      display: block;
-      width: 26px;
-      height: 2px;
-      background: #000;
-      margin: 6px 0;
-    }
-    .page-headline{
-      text-align: center;
-      padding: 18px 16px 22px;
-    }
-    .page-headline h1{
-      font-size: 36px;
-      letter-spacing: 2px;
-      font-weight: 800;
-    }
-    .intro-split{
-      max-width: var(--maxw);
-      margin: 28px auto;
-      padding: 0 16px;
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 28px;
-    }
-    .intro-left{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    .intro-left img{
-      height: 100%;
-      object-fit: cover;
-    }
-    .intro-right{
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-    .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: var(--shadow);
-    }
-    .card h2{
-      font-size: 20px;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-    .card p{
-      color: var(--muted);
-    }
-    .card ul{
-      margin-left: 18px;
-    }
-    .card li{
-      margin: 6px 0;
-    }
-    .feature{
-      max-width: var(--maxw);
-      margin: 36px auto 18px;
-      padding: 0 16px;
-    }
-    .feature .frame{
-      overflow: hidden;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
-    .feature img{
-      height: 420px;
-      width: 100%;
-      object-fit: cover;
-    }
-    .gallery{
-      max-width: var(--maxw);
-      margin: 26px auto;
-      padding: 0 16px;
-    }
-    .gallery h3{
-      text-align: center;
-      font-size: 22px;
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-    }
-    .gallery-grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-    }
-    .gallery-grid img{
-      height: 220px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      transition: transform .3s ease;
-    }
-    .gallery-grid img:hover{
-      transform: scale(1.03);
-    }
-    .poster{
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      background: #000;
-      color: #fff;
-      margin-top: 36px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .poster::before{
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: url('./Fashionweekpics/IMG_0266.JPG');
-      background-size: cover;
-      background-position: center;
-      opacity: .45;
-      filter: grayscale(.2) contrast(1.05);
-      z-index: -2;
-    }
-    .poster::after{
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,0.55));
-      z-index: -1;
-    }
-    .poster-inner{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 40px 16px;
-    }
-    .poster h2{
-      text-align: center;
-      font-size: 28px;
-      letter-spacing: 2px;
-      margin-bottom: 18px;
-    }
-    .poster-frame{
+      width: 28px;
+      height: 3px;
       background: #fff;
-      color: #111;
-      border-radius: 18px;
-      border: 8px solid #fff;
-      box-shadow: 0 18px 40px rgba(0,0,0,.25);
-      padding: 22px;
-      max-width: 900px;
-      margin: 0 auto;
+      margin: 4px 0;
+      transition: 0.4s;
     }
-    .poster-frame p{
-      margin-bottom: 12px;
-      color: #222;
-    }
-    .poster-frame h3{
-      margin-top: 10px;
-      font-size: 22px;
-      text-align: center;
-      letter-spacing: 1px;
-    }
-    footer{
-      margin-top: 34px;
-      background: #111;
-      color: #f4f4f4;
-    }
-    .footer-inner{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 18px 16px;
-      text-align: center;
-      font-size: 14px;   
-    }
-    @media(max-width: 980px){
-      .intro-split{
-        grid-template-columns: 1fr;
-      }
-      .intro-left img{
-        height: 320px;
-      }
-    }
-    @media(max-width: 820px){
+    @media (max-width: 768px){
       nav{
         display: none;
+        flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 16px;
-        background: #fff;
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        box-shadow: var(--shadow);
-        padding: 12px 14px;
-        flex-direction: column;
-        gap: 12px;
+        right: 20px;
+        background: #111;
+        padding: 15px;
+        border-radius: 8px;
       }
       nav.active{
         display: flex;
       }
       .menu-toggle{
-        display: block;
+        display: flex;
       }
-      .page-headline h1{
-        font-size: 28px;
-      }
+    }
+    .hero{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background: url(./Fashionweekpics/IMG_0266.JPG) center/cover no-repeat;
+      color: #fff;
+      padding: 60px 20px;
+    }
+    .hero img{
+      width: 350px;
+      border-radius: 12px;
+      margin: 20px;
+    }
+    .hero-content{
+      max-width: 600px;
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .hero-content h2{
+      font-size: 2rem;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+    .hero-content h3{
+      font-size: 1.4rem;
+      margin: 10px 0;
+      font-weight: 600;
+    }
+    .hero-content p{
+      margin-bottom: 12px;
+    }
+    .hero-content ul{
+      margin-left: 20px;
+      margin-bottom: 20px;
+      list-style: disc;
+    }
+    .gallery{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      padding: 40px 20px;
+    }
+    .gallery img{
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover{
+      transform: scale(1.05);
+    }
+    .fashion-section{
+      background: url(./Fashionweekpics/IMG_0270.JPG) center/ cover no-repeat;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .fashion-section h2{
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+    }
+    .fashion-section p{
+      max-width: 700px;
+      margin: 10px auto;
+      font-size: 1.1rem;
+    }
+    .fashion-section .fashion-title{
+      background: #fff;
+      color: #000;
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    footer{
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+    footer p{
+      font-size: 0.9rem;
+      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="header-wrap">
-      <div class="header-bar">
-        <div class="site-title">LUBUMBASHI FASHION WEEK</div>
-        <nav id="site-nav">
-          <a href="./home2.html">HOME</a>
-          <a href="./about.html">PROFIL</a>
-          <a href="./book.html">BOOK</a>
-          <a href="./events.html">EVENEMENTS</a>
-        </nav>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-      <div class="page-headline" aria-hidden="true"></div>
+    <h1>AGORRA</h1>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
     </div>
+    <nav id="nav">
+      <a href="./home2.html">HOME</a>
+      <a href="./about.html">PROFIL</a>
+      <a href="./book.html">BOOK</a>
+      <a href="./events.html">EVENEMENTS</a>
+    </nav>
   </header>
-
-  <section class="intro-split">
-    <div class="intro-left">
-      <img src="./Fashionweekpics/IMG_0286.JPG" alt="Fashion image">
-    </div>
-    <div class="into-right">
-      <article class="card">
-        <p>La Fashion Week de Lubumbashi est un
-          événement de mode majeur visant à
-          célébrer et promouvoir la mode, la culture
-          et l'art local organisée tous les ans depuis 
-          2022, chaque édition est une plateforme
-          de rencontre pour les acteurs de la mode 
-          à Lubumbashi.
-        </p>
-      </article>
-      <article class="card">
-        <h2>OBEJCTIFS</h2>
-        <h2>Objectifs généraux</h2>
-        <ul>
-          <li>Promouvoir la créativité et l'innovation
-            dans l'industrie de la mode a Lubumbashi
-          </li>
-          <li>Mettre en lumière les talents locaux</li>
-          <li>Encourager les échanges culturels et professionels dans le domaine</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2>Objectifs spécifiques</h2>
-        <ul>
-          <li>Présenter les collections annuellement pour les<br />
-            nouvelles saisons
-          </li>
-          <li>Faciliter les opportunités de résautage et de
-            collabortion entre les professionels de la
-            mode
-          </li>
-          <li>Sensibiliser le public à l'importance de la mode
-            et de la culture dans le dévelopment
-          </li>
-        </ul>
-      </article>
-      <article class="card">
-        <h2>PARTICIPANTS</h2>
-        <h2>Invités spéciaux</h2>
-        <ul>
-          <li>Designers locaux et internationaux</li>
-          <li>Artistes et créateurs </li>
-          <li>professionels de l'industrie de la mode</li>
-          <li>Représentants des medias</li>
-          <li>Partenaires et sponsors</li>
-        </ul>
-        <h2>Public cible</h2>
-        <ul>
-          <li>Amateurs de mode</li>
-          <li>Etudiants en design et mode</li>
-          <li>professionels du secteur textile</li>
-          <li>Grand public</li>
-        </ul>
-      </article>
+  <section class="hero">
+    <img src="./Fashionweekpics/IMG_0286.JPG" alt="Fashion image">
+    <div class="hero-content">
+      <p>La Fashion Week de Lubumbashi est un
+        événement de mode majeur visant à
+        célébrer et promouvoir la mode, la culture
+        et l'art local organisée tous les ans depuis 
+        2022, chaque édition est une plateforme
+        de rencontre pour les acteurs de la mode 
+        à Lubumbashi.
+      </p>
+      <h2>OBEJCTIFS</h2>
+      <h3>Objectifs généraux</h3>
+      <ul>
+        <li>Promouvoir la créativité et l'innovation
+          dans l'industrie de la mode a Lubumbashi
+        </li>
+        <li>Mettre en lumière les talents locaux</li>
+        <li>Encourager les échanges culturels et professionels dans le domaine</li>
+      </ul>
+      <h3>Objectifs spécifiques</h3>
+      <ul>
+        <li>Présenter les collections annuellement pour les<br />
+          nouvelles saisons
+        </li>
+        <li>Faciliter les opportunités de résautage et de
+          collabortion entre les professionels de la
+          mode
+        </li>
+        <li>Sensibiliser le public à l'importance de la mode
+          et de la culture dans le dévelopment</li>
+      </ul>
+      <h2>PARTICIPANTS</h2>
+      <h3>Invités spéciaux</h3>
+      <ul>
+        <li>Designers locaux et internationaux</li>
+        <li>Artistes et créateurs </li>
+        <li>professionels de l'industrie de la mode</li>
+        <li>Représentants des medias</li>
+        <li>Partenaires et sponsors</li>
+      </ul>
+      <h3>Public cible</h3>
+      <ul>
+        <li>Amateurs de mode</li>
+        <li>Etudiants en design et mode</li>
+        <li>professionels du secteur textile</li>
+        <li>Grand public</li>
+      </ul>
     </div>
   </section>
-
-  <section class="feature">
-    <div class="frame">
-      <img src="./Fashionweekpics/IMG_1863.JPG" alt="Banner Full Width">
+  <div class="gallery">
+    <img src="./Fashionweekpics/IMG_0277.JPG" alt="Gallery 1">
+    <img src="./Fashionweekpics/IMG_1876.JPG" alt="Gallery 2">
+    <img src="./Fashionweekpics/IMG_0284.JPG" alt="Gallery 3">
+    <img src="./Fashionweekpics/IMG_0287.JPG" alt="Gallery 4">
+    <img src="./Fashionweekpics/IMG_0270.JPG" alt="Gallery 5">
+  </div>
+  <section class="fashion-section">
+    <h2>LUBUMBASHI FASHION WEEK 2024</h2>
+      <p>La 3e édition de la Fashion Week 
+        de Lubumbashi s'est tenue les 6 et  
+        7 septembre 2024 au Musée 
+        National de Lubumbashi, mettant  
+        en avant la richesse et l'héritage  
+        de la terre congolaise à travers le 
+        thème "belle terre". Ce thème  
+        visait à célébrer aussi bien les 
+        ressources du sous-sol congolais  
+        que la diversité culturelle du pays 
+        avec un dress code en beige 
+        symbole de la terre.
+      </p>
+      <p>Le premier jour était dedié aux  
+        défilés de mode durant lesquels des  
+        mannequins ont présenté les  
+        créations de créateurs locaux. 
+        Offrant un panorama unique de la 
+        mode congolaise contemporaine.
+      </p>
+      <p>Le deuxième jour a permis au 
+        public d'acheter les oeuvres  
+        dévoilées la veille, tout en  
+        favorisant le networking entre  
+        designers, acheteurs et 
+        passionnés de mode.
+      </p>
+      <p>L'événement a été rendu possible 
+        par le biais du soutien de plusieurs  
+        parteneurs majeurs : l'institut 
+        Francais de Lubumbashi, le 
+        Groupe Psaro, la Polyclinique 
+        Delta, le magazine Buzz, Dl  
+        Multimedia et la brasserie  
+        Brasimba.
+      </p>
+      <p>Cette édition a positionné la  
+        Fashion Week de Lubumbashi 
+        comme une plateforme essentielle  
+        pour la valorisation de la mode et 
+        de la culture locale. 
+      </p>
+      LE FESTIVAL DE MODE DE LA VILLE DE LUBUMBASHI
     </div>
   </section>
-
-  <section class="gallery" aria-label="Gallery one">
-    <h3>Gallery</h3>
-    <div class="gallery-grid">
-      <img src="./Fashionweekpics/IMG_0277.JPG" alt="Gallery 1">
-      <img src="./Fashionweekpics/IMG_1876.JPG" alt="Gallery 2">
-      <img src="./Fashionweekpics/IMG_0284.JPG" alt="Gallery 3">
-      <img src="./Fashionweekpics/IMG_0287.JPG" alt="Gallery 4">
-      <img src="./Fashionweekpics/IMG_0270.JPG" alt="Gallery 5">
-    </div>
-  </section>
-
-  <section class="poster">
-    <div class="poster-inner">
-      <h2>LUBUMBASHI FASHION WEEK 2024</h2>
-      <div class="poster-frame">
-        <p>La 3e édition de la Fashion Week 
-          de Lubumbashi s'est tenue les 6 et  
-          7 septembre 2024 au Musée 
-          National de Lubumbashi, mettant  
-          en avant la richesse et l'héritage  
-          de la terre congolaise à travers le 
-          thème "belle terre". Ce thème  
-          visait à célébrer aussi bien les 
-          ressources du sous-sol congolais  
-          que la diversité culturelle du pays 
-          avec un dress code en beige 
-          symbole de la terre.
-        </p>
-        <p>Le premier jour était dedié aux  
-          défilés de mode durant lesquels des  
-          mannequins ont présenté les  
-          créations de créateurs locaux. 
-          Offrant un panorama unique de la 
-          mode congolaise contemporaine.
-        </p>
-        <p>Le deuxième jour a permis au 
-          public d'acheter les oeuvres  
-          dévoilées la veille, tout en  
-          favorisant le networking entre  
-          designers, acheteurs et 
-          passionnés de mode.
-        </p>
-        <p>L'événement a été rendu possible 
-          par le biais du soutien de plusieurs  
-          parteneurs majeurs : l'institut 
-          Francais de Lubumbashi, le 
-          Groupe Psaro, la Polyclinique 
-          Delta, le magazine Buzz, Dl  
-          Multimedia et la brasserie  
-          Brasimba.
-        </p>
-        <p>Cette édition a positionné la  
-          Fashion Week de Lubumbashi 
-          comme une plateforme essentielle  
-          pour la valorisation de la mode et 
-          de la culture locale. 
-        </p>
-        <h3>LE FESTIVAL DE MODE DE LA VILLE DE LUBUMBASHI</h3>
-      </div>
-    </div>
-  </section>
-
-  <section class="gallery" aria-label="Gallery Two">
-    <h3>More moments</h3>
-    <div class="gallery-grid">
-      <img src="./Fashionweekpics/IMG_0266.JPG" alt="Gallery 6">
-      <img src="./Fashionweekpics/IMG_0286.JPG" alt="Gallery 7">
-      <img src="./Fashionweekpics/IMG_1863.JPG" alt="Gallery 8">
-      <img src="./Fashionweekpics/IMG_1881.JPG" alt="Gallery 9">
-      <img src="./Fashionweekpics/IMG_1891.JPG" alt="Gallery 10">
-    </div>
-  </section>
-
+  <div class="gallery">
+    <img src="./Fashionweekpics/IMG_0266.JPG" alt="Gallery 6">
+    <img src="./Fashionweekpics/IMG_0286.JPG" alt="Gallery 7">
+    <img src="./Fashionweekpics/IMG_1863.JPG" alt="Gallery 8">
+    <img src="./Fashionweekpics/IMG_1881.JPG" alt="Gallery 9">
+    <img src="./Fashionweekpics/IMG_1891.JPG" alt="Gallery 10">
+  </div>
   <footer>
-    <div class="footer-inner">
-      &copy; <span id="year">2024</span> Lubumbashi Fashion Week. Tous droits réservés.</p>
-    </div>
+    <p>&copy; <span id="year">2024</span> Lubumbashi Fashion Week 2024. Tous droits réservés.</p>
   </footer>
 
   <script>
-    document.getElementById('year').textContent=newDate().getFullYear();
-    const toggle=document.getElementById('menuToggle');
-    const nav=document.getElementById('site-nav');
-    toggle.addEventListener('click', ()=>{
-      const open=nav.classList.toggle('active');
-      toggle.setAttribute('arial-expanded', open? 'true': 'false');
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
     });
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

@@ -4,32 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lushi Fashion Week</title>
-    <link rel="stylesheet" href="./CSS/styles.css">
-    <script defer src="./JC/Untitled-1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+        header{
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+        nav{
+            display: flex;
+            gap: 20px;
+        }
+        nav a{
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover{
+            color: #f39c12;
+        }
+        .menu-toggle{
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-toggle span{
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+        @media(max-width: 768px){
+            nav{
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: #222;
+                padding: 15px;
+                border-radius: 8px;
+            }
+            nav.active{
+                display: flex;
+            }
+            .menu-toggle{
+                display: flex;
+            }
+        }
+        section{
+            padding: 50px 20px;
+            text-align: center;
+        }
+        section h2{
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        section h3{
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+        .about-content{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .about-content img{
+            width: 300px;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .about-text{
+            max-width: 500px;
+            text-align: left;
+        }
+        .about-text p{
+            margin-bottom: 10px;
+        }
+        .about-text ul{
+            list-style: disc;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .gallery{
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+        .gallery img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover{
+            transform: scale(1.05);
+        }
+        footer{
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p{
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">Agorra</div>
-        <div class="menu-toggle">&#9776;</div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="./home2.html">HOME</a></li>
-                <li><a href="./book.html">BOOK</a></li>
-                <li><a href="./events.html">EVENEMENTS</a></li>
-                <li><a href="./about.html">PROFIL</a></li>
-            </ul>
+    <header>
+        <h1>AGORRA</h1>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav">
+            <a href="./home2.html">HOME</a>
+            <a href="./about.html">PROFIL</a>
+            <a href="./book.html">BOOK</a>
+            <a href="./events.html">EVENEMENTS</a>
         </nav>
     </header>
-    <section class="FA2025">
-        <h1>Lushi Fashion Week</h1>
+    <section>
+        <h2>Lushi Fashion Week</h2>
     </section>
-    <section class="about-section">
+    <section>
         <h2>A propos</h2>
         <h3>Lubumbashi Fashion Week 2025</h3>
         <div class="about-content">
-            <div class="about-img">
-                <img src="./FA 2025/IMG_2176.jpg" alt="Lubumbashi Fashion Week">
-            </div>
+            <img src="./FA 2025/IMG_2176.jpg" alt="Lubumbashi Fashion Week">
             <div class="about-text">
                 <p>La Fashion Week de Lubumbashi est un événément incontournable de la
                    scène culturelle et créative congolaise. Depuis sa création en 2022, elle se 
@@ -49,10 +170,7 @@
                 </ul>
             </div>    
         </div>
-    </section>
-    <section class="gallery-FA2025-section">
-        <h2>Thème de l'événément</h2>
-        <div class="FA2025-grid">
+        <div class="gallery">
             <img src="./FA 2025/IMG_2177.jpg" alt="Gallery 1">
             <img src="./FA 2025/IMG_2180.jpg" alt="Gallery 2">
             <img src="./FA 2025/IMG_3001.jpg" alt="Gallery 3">
@@ -62,5 +180,13 @@
     <footer class="FA2025-footer">
         <p>&copy;<span id="year">2025</span>AGORRA. Tous Droits reserves.</p>
     </footer>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('nav');
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
