@@ -4,110 +4,346 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agorra-Homepage</title>
-    <link rel="stylesheet" href="./CSS/styles.css">
+    <meta name="description" content="Agorra-Homepage"/>
+    <style>
+        :root{
+            --bg: #0f0f0f;
+            --muted: #bdbdbd;
+            --accent: #111;
+            --max-width: 1200px;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            margin: 0;
+            font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+            color: #fff;
+            background: var(--bg);
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        .container{
+            max-width: var(--max-width);
+            margin: 0;
+            padding: 1rem;
+        }
+        header{
+            backdrop-filter: blur(6px);
+            background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+            position: sticky;
+            top: 0;
+            z-index: 40;
+        }
+        .nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+        .brand{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .logo{
+            font-family: Playfair Display, serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.06em;
+            font-weight: 700;
+        }
+        .logo small{
+            display: block;
+            font-size: .55rem;
+            opacity: .7;
+            margin-top: 2px;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 1.25rem;
+            margin: 0;
+            padding: 0;
+        }
+        nav a{
+            font-weight: 600;
+            padding: .35rem .6rem;
+            border-radius: 6px;
+            transition: all .2s ease;
+            color: var(--muted); 
+        }
+        nav a:hover{
+            color: #fff;
+            transform: translateX(-3px);
+        }
+        .menu-toggle{
+            display: none;
+            background: none;
+            border: 2px solid rgba(255, 255, 255,.1);
+            padding: .35rem;
+            border-radius: 8px;
+            color: var(--muted);
+        }
+        .hero{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            padding-block-end: 2rem 0;
+            align-items: center;
+        }
+        .teaser{
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            min-height: 320px;
+            background: #111;
+        }
+        .teaser video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .teaser .overlay{
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.6));
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+        }
+        .teaser .cta{
+            font-family: Playfair Display, serif;
+            font-size: 2rem;
+        }
+        .features{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .feature{
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            min-height: 220px;
+            display: flex;
+            align-items: flex-end;
+        }
+        .feature .meta{
+            padding: 1rem 1.2rem;
+            background: linear-gradient(180deg, transparent, rgba(0,0,0,0.65));
+            width: 100%;
+        }
+        .feature h3{
+            font-family: Playfair Display, serif;
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .feature p{
+            margin: 6px 0 0;
+            font-size: .85rem;
+            color: var(--muted);
+        }
+        .rubrics{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+        .rubric{
+            border-radius: 8px;
+            overflow: hidden;
+            min-height: 140px;
+            display: flex;
+            align-items: flex-end;
+            padding: 0;
+        }
+        .rubric .meta{
+            padding: 1rem;
+        }
+        footer{
+            margin-top: 2rem;
+            padding: 2rem 0;
+            color: var(--muted);
+        }
+        .footer-inner{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .bg-2025{
+            background-image: url(./FA2025/IMG_2176.jpg);
+        }
+        .bg-2024{
+            background-image: url(./Fashionweekpics/IMG_0266.JPG);
+        }
+        .bg-rub1{
+            background-image: url(./IMG_0009.JPG);
+        }
+        .bg-rub2{
+            background-image: url(./IMG_0259.JPG);
+        }
+        .bg-rub3{
+            background-image: url(./IMG_0266.JPG);
+        }
+        .bg-rub4{
+            background-image: url(./IMG_0841.JPG);
+        }
+        @media(max-width: 900px){
+            .features{
+                grid-template-columns: 1fr;
+            }
+            .rubrics{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media(max-width: 640px){
+            .menu-toggle{
+                display: inline-block;
+            }
+            nav ul{
+                display: none;
+                position: absolute;
+                right: 1rem;
+                top: 64px;
+                background: rgba(10,10,10,.95);
+                padding: 1rem;
+                border-radius: 10px;
+                flex-direction: column;
+                min-width: 180px;
+            }
+            nav ul.show{
+                display: flex;
+            }
+            .logo{
+                font-size: 1.25rem;
+            }
+            .rubrics{
+                grid-template-columns: 1fr;
+            }
+        }
+        .muted{
+            color: var(--muted);
+        }
+        button.primary{
+            border: 0;
+            padding: .6rem 1rem;
+            border-radius: 8px;
+            background: #fff;
+            color: #000;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="brand">
-            <div class="logo">AGORRA</div>
-            <div style="font-size: 12px;color: var(--muted)">AGORRA Style</div>
+        <div class="container nav">
+            <div class="brand">
+                <div class="logo">AGORRA <small>Agorra-stye</small></div>
+            </div>
+            <nav aria-label="Main navigation">
+                <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
+                <ul id="mainNav">
+                    <li><a href="./home2.html">Home</a></li>
+                    <li><a href="./about.html">Profil</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./book.html">Book</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>    
-            <div class="menu-toggle" id="menuToggle" aria-label="menu toggle" role="button">
-                <span></span><span></span><span></span>
-            </div>
-            <div class="navlinks" id="navLinks">
-                <a href="./home2.html">Home</a>
-                <a href="./about.html">Profil</a>
-                <a href="./book.html">Book</a>
-                <a href="./events.html">Events</a>
-            </div>
-        </nav>
     </header>
-    <main>
-        <section class="hero">
-            <video autoplay muted loop playsinline src="./teaser.mp4" aria-hidden="true"></video>
-            <div class="hero-overlay fade-in">
-                <h1>Bienvenu sur Agorra</h1>
-                <p>Let's change your style</p>
-                <a class="cta" href="./events.html">Explore</a>
+    <main class="container">
+        <section class="hero" id="top">
+            <div class="teaser" aria-hidden="false">
+                <video autoplay muted loop playsinline poster="">
+                    <source src="./teaser.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <div>
+                        <div class="cta">AGORRA - Histoire, Parcours, Culture</div>
+                        <p class="muted">A Vogue-style editorial showcase - smooth, minimal, elegant.</p>
+                    </div>
+                </div>
             </div>
-        </section>
-        <section class="section" id="features">
-            <div class="features">
-                <article class="feature fade-in" style="animation-delay: .1s;\">
-                    <img src="./FA 2025/IMG_2180.jpg" alt="Feature 1">
-                    <div class="body">
-                        <h2>Lushi Fashion Week 2025</h2>
-                        <p>Le plus grand evenement de mode a Lubumbashi. <a href="./fashionweek2025.html">En savoir plus</a></p>
+            <div class="features" id="features">
+                <article class="feature bg-2025" style="cursor: pointer;" onclick="location.href='fashionweek2025.html'" role="link" tabindex="0">
+                    <div class="meta">
+                        <h3>Lubumbashi Fashion Week 2025</h3>
+                        <p class="muted">Full show coverage & highlights - click to open.</p>
                     </div>
                 </article>
-                <article class="feature fade-in" style="animation-delay: .25s">
-                    <img src="./Fashionweekpics/IMG_0284.JPG" alt="Feature 2">
-                    <div class="body">
-                        <h2>Lushi Fashion Week 2024</h2>
-                        <p>Le plus grand evenement de mode a Lubumbashi. <a href="./fashionweek.html">En savoir plus</a></p>
+                <article class="feature bg-2024" style="cursor: pointer;" onclick="location.href='fashionweek.html'" role="link" tabindex="0">
+                    <div class="meta">
+                        <h3>Lubumbashi Fashion Week 2024</h3>
+                        <p class="muted">Archives & meilleurs design - clicker pour ouvrir.</p>
                     </div>
                 </article>
             </div>
-            <div class="rubric" aria-label="rubric">
-                <div class="card fade-in" style="animation-delay: .35s">
-                    <div style="font-size: 32px; font-weight: 700">01</div>
-                    <h3>Passerelle</h3>
-                    <p>Connect designers and models for events.</p>
+        </section>
+        <section class="rubrics" aria-label="sections">
+            <a class="rubric bg-rub1" href="">
+                <div class="meta">
+                    <strong>Editorial</strong>
+                    <div class="muted">Features & long reads</div>
                 </div>
-                <div class="card fade-in" style="animation-delay: .45s">
-                    <div style="font-size: 32px;font-weight: 700">02</div>
-                    <h3>Collections</h3>
-                    <p>Showcase seasonal collections with editorial flair.</p>
+            </a>
+            <a class="rubric bg-rub2" href="">
+                <div class="meta">
+                    <strong>Runway</strong>
+                    <div class="muted">Live shows & galleries</div>
                 </div>
-                <div class="card fade-in" style="animation-delay: .55s">
-                    <div style="font-size: 32px;font-weight: 700">03</div>
-                    <h3>Evenements</h3>
-                    <p>Create and manage high-style events.</p>
+            </a>
+            <a class="rubric bg-rub3" href="">
+                <div class="meta">
+                    <strong>Photography</strong>
+                    <div class="muted">Shoots & portfolio</div>
                 </div>
-                <div class="card fade-in" style="animation-delay: .65s">
-                    <div style="font-size: 32px;font-weight: 700">04</div>
-                    <h3>Profil</h3>
-                    <p>Personalized profiles and lookbooks</p>
+            </a>
+            <a class="rubric bg-rub4" href="">
+                <div class="meta">
+                    <strong>Style Guides</strong>
+                    <div class="muted">How to wear the looks</div>
                 </div>
+            </a>
+        </section>
+        <section id="about" style="margin-top: 1.6rem; display: flex; justify-content: space-between; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 220px;">
+                <h2 style="font-family: Playfair Display, serif; margin: 0 0 .3rem 0;">A propos d'Agorra</h2>
+                <p class="muted">Agorra est une agence de mode basee a Lubumbashii.</p>
+            </div>
+            <div style="min-width: 180px;">
+                <a href="./contact.html" class="primary">Contactez-Nous</a>
             </div>
         </section>
+        <footer>
+            <div class="footer-inner">
+                <div>
+                    <div style="font-weight: 700;">AGORRA</div>
+                    <div class="muted">&copy;<span id="year"></span>Agorra - Tous droits reserves</div>
+                </div>
+                <div class="muted">Designed for Agorra editorial layout.</div>
+            </div>
+        </footer>
     </main>
-    <footer>
-        <div class="footer-inner">
-            <div>
-                <div style="font-family: Playfair Display, serif;font-weight: 700;font-size: 20px">Agorra</div>
-                <div style="margin-top: 8px; color: var(--muted); font-size: 14px">Vogue-inspired fashion platform</div>
-            </div>
-            <div class="social">
-                <a href="">Instagram</a>
-                <a href="">Tiktok</a>
-                <a href="">Contact</a>
-            </div>
-            <div style="min-width: 160px;text-align: right;color: var(--muted)">
-                <div>&copy;<span id="year"></span>Agorra</div>
-            </div>
-        </div>
-    </footer>
     <script>
-        document.getElementById('year').textContent=newDate().getFullYear();
-        const menuToggle=document.getElementById('menuToggle');
-        const navLinks=document.getElementById('navLinks');
-        menuToggle.addEventListener('click',()=>{
-            navLinks.classList.toggle('show');
-            menuToggle.classList.toggle('open');
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        menuToggle.addEventListener('click', ()=>{
+            const isShow = mainNav.classList.toggle('show');
+            menuToggle.setAttribute('aria-expanded', String(isShown));
         });
-        navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-            if(window.innerWidth<640)navLinks.classList.remove('show');
-        }));
-        document.addEventListener('keydown', (e)=>{
-            if(e.key==='Escape') navLinks.classList.remove('show');});
-            const io=new IntersectionObserver((entries)=>{
-                entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
-            }, {threshold: .12});
-            document.querySelectorAll('fade-in').forEach(el=>{io.observe(el); 
-                el.style.transition='opacity .8s, transform .6s';});
+        document.querySelectorAll('/feature[role="link"]').forEach(el=>{
+            el.addEventListener('keydown', (e)=>{
+                if(e.key==='Enter' || e.key==='') el.click(); 
+            });
+        });
     </script>
 </body>
 </html>
